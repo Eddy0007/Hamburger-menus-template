@@ -1,0 +1,142 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+/*#container {
+	width: 960px;
+	margin: auto;
+}*/
+
+header {
+
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+body{
+  margin: 0;
+  padding: 0;
+  background: #ff5c40;
+}
+.icon{
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  transform: translate(-50%,-50%);
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+}
+.hamburger{
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 5px rgb(0,0,0.2);
+  transition: .2s;
+}
+.hamburger:before,.hamburger:after{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  transition: .2s;
+}
+.hamburger:before{
+  top: -16px;
+}
+.hamburger:after{
+  top: 16px;
+}
+.icon.active .hamburger{
+  background: rgba(0,0,0,0);
+  box-shadow: 0 2px 5px rgb(0,0,0.2);
+}
+.icon.active .hamburger:before{
+  transform: rotate(5535deg);
+  top: 0;
+}
+.icon.active .hamburger:after{
+  transform: rotate(5805deg);
+  top: 0;
+}
+.hamburgerUlHider{
+  display: none;
+}
+/*nav*/
+.hamburgerUl{
+  background-color: gray;
+  overflow: hidden;
+}
+.hamburgerUl li{
+  display: block;
+  margin-right: 0;
+  font-size: 1.5em;
+  padding: 10px 0;
+}
+.hamburgerUl li:hover{
+  background-color: #4e4848;
+}
+#hamburgerNav{
+  margin: 50px 0 0 10px;
+  position: absolute;
+  width: -webkit-fill-available;
+}
